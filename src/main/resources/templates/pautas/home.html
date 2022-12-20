@@ -7,8 +7,11 @@
     <title>Pautas</title>
 </head>
 <body>
-    <h1>Pautas Cadastradas</h1>
-    <div>Total de votos atuais: <span>525</span></div>
-    <div>Votação aprovada: <span>SIM</span></div>
+    <h1>Pautas Cadastradas!</h1>
+    <div th:each="pauta : ${pautas}">
+    	<div>Votação SIM: <span th:text="${pauta.votoSim}">0</span></div>
+    	<div>Votação NÃO: <span th:text="${pauta.votoNao}">0</span></div>
+    	<div>Total de votos atuais: <span th:text="${pauta.votoSim} + ${pauta.votoNao}">0</span></div>
+    </div>
 </body>
 </html>
