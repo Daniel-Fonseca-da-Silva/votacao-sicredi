@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.votacao.sicredi.repository.PautaRepository;
 
 @Controller
-@RequestMapping(path = "/pautas")
+@RequestMapping("pautas")
 public class PautaController {
 	
 	@Autowired
@@ -19,6 +19,11 @@ public class PautaController {
 	public String buscarPauta(Model model) {
 		model.addAttribute("pautas", repository.buscaTodasAsPautas());
 		return "pautas/home";
+	}
+	
+	@GetMapping("formulario")
+	public String formulario() {
+		return "pautas/formulario";
 	}
 
 }
