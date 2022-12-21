@@ -16,5 +16,7 @@ public class Associado {
 	private Long id;
 	private String nome;
 	private String cargo;
+	private String email;
+	private String senha;
 
 }
