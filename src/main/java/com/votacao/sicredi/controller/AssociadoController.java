@@ -20,5 +20,10 @@ public class AssociadoController {
 		model.addAttribute("associados", repository.buscaTodosAssociados());
 		return "associados/home";
 	}
+	
+	@GetMapping("formulario")
+	public String formulario() {
+		return "associados/formulario";
+	}
 
 }
