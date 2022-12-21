@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associados</title>
+</head>
+<body>
+    <h1>Associados Cadastrados!</h1>
+    <div th:each="associado : ${associados}">
+    	<div>Nome: <span th:text="${associado.nome}">Nome</span></div>
+    	<div>Cargo: <span th:text="${associado.cargo}">Cargo</span></div>
+    </div>
+    <a href="associados/formulario"><button>Novo</button></a>
+</body>
+</html>
