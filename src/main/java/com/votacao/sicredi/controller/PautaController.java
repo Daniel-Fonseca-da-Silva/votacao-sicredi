@@ -10,14 +10,13 @@ import com.votacao.sicredi.repository.PautaRepository;
 
 @Controller
 @RequestMapping(path = "/pautas")
-public class VotacaoController {
+public class PautaController {
 	
 	@Autowired
 	private PautaRepository repository;
 	
 	@GetMapping()
 	public String buscarPauta(Model model) {
-		
 		model.addAttribute("pautas", repository.buscaTodasAsPautas());
 		return "pautas/home";
 	}
