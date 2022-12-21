@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -11,13 +11,26 @@
 </head>
 
 <body>
-    <h1>Pautas Cadastradas!</h1>
-    <div th:each="pauta : ${pautas}">
-        <div>Votação SIM: <span th:text="${pauta.votoSim}">0</span></div>
-        <div>Votação NÃO: <span th:text="${pauta.votoNao}">0</span></div>
-        <div>Total de votos atuais: <span th:text="${pauta.votoSim} + ${pauta.votoNao}">0</span></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm"></div>
+
+            <div class="col-sm">
+                <div class="text-center">
+                    <h3>Pautas Cadastradas!</h3>
+                    <div th:each="pauta : ${pautas}">
+                        <div>Votação SIM: <span th:text="${pauta.votoSim}">0</span></div>
+                        <div>Votação NÃO: <span th:text="${pauta.votoNao}">0</span></div>
+                        <div>Total de votos atuais: <span th:text="${pauta.votoSim} + ${pauta.votoNao}">0</span></div>
+                    </div>
+                    <a href="pautas/formulario"><button class="btn btn-primary">Novo voto</button></a>
+                </div>
+            </div>
+
+            <div class="col-sm"></div>
+        </div>
     </div>
-    <a href="pautas/formulario"><button class="btn btn-primary">Novo</button></a>
 </body>
 
 </html>
