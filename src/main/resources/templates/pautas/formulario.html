@@ -18,7 +18,11 @@
 			<div class="col-sm">
 				<div class="text-center">
 					<h3>Votação em Pauta</h3>
-					<form action="/pauta/novo" method="post">
+					<form action="/pautas/novo" method="post">
+						<div class="mb-3">
+							<label for="idAssociado" class="form-label">Associado codigo</label>
+							<input type="text" name="idAssociado" class="form-control" placeholder="ID associado">
+						</div>
 						<div class="form-check">
 							<input class="form-check-input" name="votoSim" type="checkbox">
 							<label class="form-check-label" for="votoSim">
